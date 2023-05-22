@@ -69,6 +69,11 @@ const routes: Routes = [{
         .then(m => m.MiscellaneousModule),
     },
     {
+      path: 'zonas',
+      loadChildren: () => import('./zonas/zonas.module')
+        .then(m => m.ZonasModule),
+    },
+    {
       path: '',
       redirectTo: 'dashboard',
       pathMatch: 'full',
