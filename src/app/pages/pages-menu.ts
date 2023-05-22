@@ -2,6 +2,20 @@ import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
+    title: 'Habitats',
+    icon: 'home-outline',
+    children: [
+      {
+        title: 'Listar',
+        link: '/pages/habitat/list',
+      },
+      {
+        title: 'Agregar',
+        link: '/pages/habitat/add',
+      },
+    ],
+  },
+  {
     title: 'E-commerce',
     icon: 'shopping-cart-outline',
     link: '/pages/dashboard',

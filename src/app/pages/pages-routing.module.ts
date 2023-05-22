@@ -69,6 +69,11 @@ const routes: Routes = [{
         .then(m => m.MiscellaneousModule),
     },
     {
+      path: 'habitat',
+      loadChildren: () => import('./habitat/habitat.module')
+        .then(m => m.HabitatModule),
+    },
+    {
       path: '',
       redirectTo: 'dashboard',
       pathMatch: 'full',
