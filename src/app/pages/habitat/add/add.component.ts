@@ -10,15 +10,16 @@ export class AddComponent implements OnInit {
   nombre: string;
   clima: string;
   tipoVegetacion: string;
-  public listTipoVegetacion: [
-    {id: 1, value:"One"},
-    {id: 2, value:"Two"},
-    {id: 3, value:"Three"}
-  ]
+  listTipoVegetacion: [
+    {id: 1, value:"Bosque Templado"},
+    {id: 2, value:"Selva Húmeda"},
+    {id: 3, value:"Manglar"}
+  ];
 
   constructor() { }
 
   ngOnInit(): void {
+    this.tipoVegetacion = "";
   }
 
   add(){

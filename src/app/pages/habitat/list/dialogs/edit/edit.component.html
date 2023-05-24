@@ -1,16 +1,13 @@
 <div class="card">
     <div class="card-body">
-        Agregar Habitats
-    </div>
-</div>
-
-<div class="card">
-    <div class="card-body">
         <form>
+            <label>Nombre</label>
             <input [(ngModel)]="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre Habitat">
             <br>
+            <label>Clima</label>
             <input [(ngModel)]="clima" name="clima" type="text" class="form-control" placeholder="Clima Habitat">
             <br>
+            <label>Tipo Vegetación</label>
             <select [(ngModel)]="tipoVegetacion" name="tipoVegetacion" class="custom-select form-control">
                 <option value="">Tipo de Vegetación</option>
                 <option value="1">Bosque templado</option>
@@ -18,7 +15,7 @@
                 <option value="3">Manglar</option>
             </select>
             <br><br>
-            <button (click)="add()" type="submit" class="btn btn-primary">Agregar</button>
+            <button type="submit" class="btn btn-primary">Editar</button>
         </form>
     </div>
 </div>
