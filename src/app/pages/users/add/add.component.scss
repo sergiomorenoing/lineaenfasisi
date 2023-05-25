@@ -1,0 +1,70 @@
+$color-primario: #E49A2B;
+$color-secundario: #FFF3E1;
+$color-terciario: #F5DBB5;
+$color-error: #DC0004;
+$color-negro: #671313;
+$color-blanco: #FFFFFF;
+
+.titulo {
+    background-color: $color-primario;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+
+body {
+    background-color: $color-secundario;
+}
+
+.form-row {
+    background-color: $color-primario;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.form-row label {
+    color: $color-blanco;
+}
+
+.form-control {
+    background-color: $color-secundario;
+    color: $color-negro;
+    border-color: $color-terciario;
+}
+.table th,
+.table td {
+  background-color: #FFF3E1; // Fondo de las celdas
+}
+
+.table .btn {
+  background-color: #F5DBB5; // Fondo de los botones
+  color: #DC0004; // Color del texto de los botones
+}
+
+.table .btn:hover {
+  background-color: #DC0004; // Cambio de color al pasar el cursor por encima de los botones
+}
+.titulo {
+  background-color: #E49A2B;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+.btn-primary {
+    background-color: $color-primario;
+    color: $color-blanco;
+    border-color: $color-negro;
+}
+
+h2 {
+    color: $color-negro;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

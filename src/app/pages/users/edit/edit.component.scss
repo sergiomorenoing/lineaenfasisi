@@ -1,0 +1,50 @@
+$titulo-color: #E49A2B;
+$input-bg-color: #FFF3E1;
+$input-border-color: #F5DBB5;
+$button-bg-color: #DC0004;
+$button-text-color: #FFF;
+$button-disabled-bg-color: #671313;
+
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: $titulo-color;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid $input-border-color;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: $input-bg-color;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: $button-bg-color;
+  color: $button-text-color;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darken($button-bg-color, 10%);
+}
+
+button:disabled {
+  background-color: $button-disabled-bg-color;
+  cursor: not-allowed;
+}
