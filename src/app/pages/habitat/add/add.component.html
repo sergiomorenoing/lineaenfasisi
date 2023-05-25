@@ -1,12 +1,32 @@
-<div class="card">
-    <div class="card-body">
-        Agregar Habitats
+<h4>¡Bienvenido, Empleado X!</h4>
+  <br>
+<h5>¿Qué deseas hacer?</h5>
+<div>
+<div class="row" id="container">
+    <div class="col-sm-3 w-100 border-0" style="background-color: #E49A2B;text-align: center;">
+      <div class="card  bg-transparent border-0 text-white">
+        <div class="card-body">
+          <h5 class="card-title text-white">Hábitats actuales</h5>
+          <p class="card-text  text-white">
+            Habitat 1
+            <br>
+            Habitat 2
+            <br>
+            Habitat 3
+            <br>
+            Habitat 4
+            <br>
+            Habitat 5
+          </p>
+        </div>
+      </div>
     </div>
-</div>
 
-<div class="card">
-    <div class="card-body">
-        <form>
+    <div class="col-sm-5 w-100 " style="background-color: #F5DBB5;">
+      <div class="card bg-transparent border-0 ">
+        <div class="card-body">
+          <h5 class="card-title text-danger">Agregar nuevo hábitat</h5>
+          <form>
             <input [(ngModel)]="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre Habitat">
             <br>
             <input [(ngModel)]="clima" name="clima" type="text" class="form-control" placeholder="Clima Habitat">
@@ -18,7 +38,16 @@
                 <option value="3">Manglar</option>
             </select>
             <br><br>
-            <button (click)="add()" type="submit" class="btn btn-primary">Agregar</button>
+            <button (click)="add()" type="submit" class="btn text-white" style="background-color: #671313">Agregar</button>
         </form>
+        </div>
+      </div>
     </div>
+  <div class="col-sm-4 w-100 ">
+    <div class="card bg-transparent text-dark border-0" >
+      <div class="card-body ">
+        <img src="https://cdn-icons-png.flaticon.com/512/4078/4078446.png" alt="habitat" id="image-habitat">
+      </div>
+    </div>
+  </div>
 </div>
