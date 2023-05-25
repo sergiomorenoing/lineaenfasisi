@@ -1,6 +1,39 @@
 import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
+
+  {
+    title: 'Usuarios',
+    icon: 'people-outline',
+    children: [
+      {
+        title: 'Agregar',
+        link: '/pages/users/add',
+      },
+      {
+        title: 'Actualizar',
+        link: '/pages/users/update',
+      },
+      {
+        title: 'Editar',
+        link: '/pages/users/edit',
+      },
+    ],
+  },
+  {
+    title: 'Habitats',
+    icon: 'home-outline',
+    children: [
+      {
+        title: 'Listar',
+        link: '/pages/habitat/list',
+      },
+      {
+        title: 'Agregar',
+        link: '/pages/habitat/add',
+      },
+    ],
+  },
   {
     title: 'Zonas',
     icon: 'layout-outline',
