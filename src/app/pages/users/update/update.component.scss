@@ -1,0 +1,48 @@
+// .table {
+//     background-color: #ffffff; // Fondo blanco
+//   }
+  
+//   .table th,
+//   .table td {
+//     background-color: #f8f9fa; // Fondo gris claro
+//     color: #212529; // Color del texto
+//   }
+  
+//   .table .btn {
+//     background-color: #ffffff; // Fondo blanco para botones
+//     color: #212529; // Color del texto de los botones
+//     border: 1px solid #ced4da; // Borde gris claro para los botones
+//   }
+  
+//   .table .btn:hover {
+//     background-color: #e9ecef; // Fondo gris más claro al pasar el cursor por encima
+//   }
+  
+.table {
+    background-color: #E49A2B; // Fondo de la tabla
+    color: #671313; // Color del texto en la tabla
+  }
+  
+  .table th,
+  .table td {
+    background-color: #FFF3E1; // Fondo de las celdas
+  }
+  
+  .table .btn {
+    background-color: #F5DBB5; // Fondo de los botones
+    color: #DC0004; // Color del texto de los botones
+  }
+  
+  .table .btn:hover {
+    background-color: #DC0004; // Cambio de color al pasar el cursor por encima de los botones
+  }
+  .titulo {
+    background-color: #E49A2B;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  
