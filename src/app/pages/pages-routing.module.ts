@@ -74,6 +74,11 @@ const routes: Routes = [{
         .then(m => m.MiscellaneousModule),
     },
     {
+      path: 'zonas',
+      loadChildren: () => import('./zonas/zonas.module')
+        .then(m => m.ZonasModule),
+      },
+      {
       path: 'habitat',
       loadChildren: () => import('./habitat/habitat.module')
         .then(m => m.HabitatModule),

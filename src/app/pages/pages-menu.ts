@@ -35,6 +35,20 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
+    title: 'Zonas',
+    icon: 'layout-outline',
+    children: [
+      {
+        title: 'Listar',
+        link: '/pages/zonas/list',
+      }, 
+      {
+        title: 'Crear',
+        link: '/pages/zonas/create',
+      }, 
+    ],
+  },
+  {
     title: 'E-commerce',
     icon: 'shopping-cart-outline',
     link: '/pages/dashboard',
