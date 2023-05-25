@@ -33,7 +33,7 @@ export class EditComponent implements OnInit {
 
   }
 
-  guardarCambios() {
+  actualizarRegistros() {
     // Aquí puedes implementar la lógica para guardar los cambios realizados en el empleado
     // Por ejemplo, puedes buscar el empleado en el array empleados y actualizar sus propiedades
     
@@ -50,10 +50,24 @@ export class EditComponent implements OnInit {
         break; // Terminar el bucle una vez que se actualice el empleado
       }
     }
-    
     console.log('Empleados actualizados:', this.empleados);
     
   }
+
+  eliminarRegistros() {
+
+    if (this.empleado) {
+      const index = this.empleados.findIndex(emp => emp.id === this.empleado.id);
+      if (index !== -1) {
+        this.empleados.splice(index, 1); // Eliminar el empleado de la lista
+        this.empleado = null; // Limpiar el empleado seleccionado
+      }
+      console.log('Empleados eliminar:', this.empleados);
+    }
+    
+    // Otra lógica para eliminar registros...
+  }
+  
   
 
 }
