@@ -9,6 +9,8 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 export class EditComponent implements OnInit {
 
   id: number;
+  control:number;
+  
   empleado: any = {}; // Aquí debes tener la estructura de datos correspondiente a un empleado
 
   empleados = [
@@ -29,7 +31,7 @@ export class EditComponent implements OnInit {
     });
 
     this.empleado = this.empleados.find(emp => emp.id === this.id)
-
+    this.control = this.id;
 
   }
 
@@ -51,7 +53,7 @@ export class EditComponent implements OnInit {
       }
     }
     console.log('Empleados actualizados:', this.empleados);
-    
+    this.control = this.id;
   }
 
   eliminarRegistros() {
@@ -64,7 +66,7 @@ export class EditComponent implements OnInit {
       }
       console.log('Empleados eliminar:', this.empleados);
     }
-    
+    this.control = this.id + 1;
     // Otra lógica para eliminar registros...
   }
   
