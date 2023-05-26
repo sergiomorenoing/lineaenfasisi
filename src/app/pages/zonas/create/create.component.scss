@@ -1,0 +1,31 @@
+.recuadro_plantilla{
+    width: 500px;
+    height: 300px;
+    background-color: #E49A2B;
+    position: relative;
+}
+
+.titulo_recuadro{
+    padding-left: 3%;
+    font-size: 25px;
+    color: white ;
+    position: absolute;
+    width: 70%;
+    float: left;
+}
+
+.Posicion{
+    position: absolute;
+    left:32%;
+}
+
+#Crear{
+    position: absolute;
+    bottom: 2%;
+    left: 42%;
+    background-color: #671313;
+    color:white;
+    height: 35px;
+    width: 100px;
+    border:none;
+}
