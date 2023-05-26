@@ -1,0 +1,30 @@
+<div class="row" id="container">
+    <div class="col-sm-5 w-100 " style="background-color: #F5DBB5;">
+      <div class="card bg-transparent border-0 ">
+        <div class="card-body">
+          <h5 class="card-title text-danger">Agregar nuevo hábitat</h5>
+          <form>
+            <input [(ngModel)]="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre Habitat">
+            <br>
+            <input [(ngModel)]="clima" name="clima" type="text" class="form-control" placeholder="Clima Habitat">
+            <br>
+            <select [(ngModel)]="tipoVegetacion" name="tipoVegetacion" class="custom-select form-control">
+                <option value="">Tipo de Vegetación</option>
+                <option value="1">Bosque templado</option>
+                <option value="2">Selva húmeda</option>
+                <option value="3">Manglar</option>
+            </select>
+            <br><br>
+            <button (click)="add()" type="submit" class="btn text-white" style="background-color: #671313">Agregar</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  <div class="col-sm-4 w-100 ">
+    <div class="card bg-transparent text-dark border-0" >
+      <div class="card-body ">
+        <img src="https://cdn-icons-png.flaticon.com/512/4078/4078446.png" alt="habitat" id="image-habitat">
+      </div>
+    </div>
+  </div>
+</div>

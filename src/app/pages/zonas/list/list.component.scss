@@ -1,0 +1,59 @@
+.recuadro_plantilla{
+    width: 1000px;
+    height: 300px;
+    background-color: #E49A2B;
+    position: relative;
+}
+
+.titulo_recuadro{
+    padding-left: 3%;
+    font-size: 25px;
+    color: white ;
+    position: absolute;
+    width: 70%;
+    float: left;
+}
+
+.contenido_recuadro{
+    width: 600px;
+    height: 270px;
+    background-color: #FFF3E1;
+    position: absolute;
+    right: 2%;
+    top: 5%;
+    margin: 0;
+}
+
+#select_zona{
+    position: absolute;
+    top:45%;
+    left:12%;
+}
+
+.contenido_especifico_recuadro{
+    position: absolute;
+    top:30%;
+    width: 95%;
+    height: 70px;
+    left: 2%;
+    background-color: #F5DBB5;
+    box-shadow: 1px 1px 1px gray;
+    padding:0%;
+}
+
+#eliminar{
+    position: absolute;
+    bottom: 2%;
+    left: 45%;
+    background-color: #DC0004;
+    color:white;
+    height: 35px;
+    width: 100px;
+    border:none;
+}
+
+.atributos{
+    position: absolute;
+    font-size: 20px;
+    margin:0;
+}

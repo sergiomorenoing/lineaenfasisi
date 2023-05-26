@@ -1,0 +1,29 @@
+<h1>¡Bienvenido Empleado {{bienvenida}}!</h1>
+
+<div class="recuadro_plantilla">
+
+    <h1 class="titulo_recuadro">Zonas actuales</h1>
+
+    <select id="select_zona" (change)="cambiarZona($event.target.value)"> 
+        <option value="-" selected>Seleccione la zona</option>
+        <option value="Zona 1">Zona 1</option>
+        <option value="Zona 2">Zona 2</option>
+        <option value="Zona 3">Zona 3</option>
+    </select>
+
+    <div class="contenido_recuadro">
+        <h1 style="position:absolute; left:4%; font-size:20px;">{{zona_actual}}</h1>
+
+        <div class="contenido_especifico_recuadro">
+            <h1 class="atributos">{{especies}}</h1>
+        </div>
+        
+        <div class="contenido_especifico_recuadro" style="top:65%; height:40px;">
+            <h1 class="atributos">{{extension}}</h1>
+        </div>
+
+        <button id="eliminar">Eliminar</button>
+
+    </div>
+
+</div>

@@ -19,6 +19,11 @@ const routes: Routes = [{
       component: DashboardComponent,
     },
     {
+      path: 'users',
+      loadChildren: () => import('./users/users.module')
+        .then(m => m.UsersModule),
+    },
+    {
       path: 'layout',
       loadChildren: () => import('./layout/layout.module')
         .then(m => m.LayoutModule),
@@ -67,6 +72,21 @@ const routes: Routes = [{
       path: 'miscellaneous',
       loadChildren: () => import('./miscellaneous/miscellaneous.module')
         .then(m => m.MiscellaneousModule),
+    },
+    {
+      path: 'itinerario',
+      loadChildren: () => import('./itinerario/itinerario.module')
+        .then(m => m.ItinerarioModule),
+    },
+    {
+      path: 'zonas',
+      loadChildren: () => import('./zonas/zonas.module')
+        .then(m => m.ZonasModule),
+      },
+      {
+      path: 'habitat',
+      loadChildren: () => import('./habitat/habitat.module')
+        .then(m => m.HabitatModule),
     },
     {
       path: '',
