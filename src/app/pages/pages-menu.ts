@@ -21,6 +21,20 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
+    title: 'Itinerarios',
+    icon: 'people-outline',
+    children: [
+      {
+        title: 'Agregar',
+        link: '/pages/itinerario/agregar',
+      },
+      {
+        title: 'Listar',
+        link: '/pages/itinerario/listar',
+      },
+    ],
+  },
+  {
     title: 'Habitats',
     icon: 'home-outline',
     children: [

@@ -74,6 +74,11 @@ const routes: Routes = [{
         .then(m => m.MiscellaneousModule),
     },
     {
+      path: 'itinerario',
+      loadChildren: () => import('./itinerario/itinerario.module')
+        .then(m => m.ItinerarioModule),
+    },
+    {
       path: 'zonas',
       loadChildren: () => import('./zonas/zonas.module')
         .then(m => m.ZonasModule),
