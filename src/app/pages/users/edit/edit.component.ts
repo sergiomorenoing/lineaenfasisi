@@ -9,6 +9,8 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 export class EditComponent implements OnInit {
 
   id: number;
+  control:number;
+  
   empleado: any = {}; // Aquí debes tener la estructura de datos correspondiente a un empleado
 
   empleados = [
@@ -29,11 +31,11 @@ export class EditComponent implements OnInit {
     });
 
     this.empleado = this.empleados.find(emp => emp.id === this.id)
-
+    this.control = this.id;
 
   }
 
-  guardarCambios() {
+  actualizarRegistros() {
     // Aquí puedes implementar la lógica para guardar los cambios realizados en el empleado
     // Por ejemplo, puedes buscar el empleado en el array empleados y actualizar sus propiedades
     
@@ -50,10 +52,24 @@ export class EditComponent implements OnInit {
         break; // Terminar el bucle una vez que se actualice el empleado
       }
     }
-    
     console.log('Empleados actualizados:', this.empleados);
-    
+    this.control = this.id;
   }
+
+  eliminarRegistros() {
+
+    if (this.empleado) {
+      const index = this.empleados.findIndex(emp => emp.id === this.empleado.id);
+      if (index !== -1) {
+        this.empleados.splice(index, 1); // Eliminar el empleado de la lista
+        this.empleado = null; // Limpiar el empleado seleccionado
+      }
+      console.log('Empleados eliminar:', this.empleados);
+    }
+    this.control = this.id + 1;
+    // Otra lógica para eliminar registros...
+  }
+  
   
 
 }
