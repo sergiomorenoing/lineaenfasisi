@@ -1,13 +1,30 @@
 <h1>¡Bienvenido Empleado X!</h1>
-  
-<div class="recuadro_plantilla">
-    <h1 class="titulo_recuadro">Crear Zona</h1>
-    <br> <br> <br> <br>
-    <input [(ngModel)]="Id_Zona" class="Posicion" type="numeric" name="Id Zona" placeholder="Id Zona">
-    <br> <br>
-    <input [(ngModel)]="NombreZona" class="Posicion" type="text" name="Nombre de Zona" placeholder="Nombre de Zona">
-    <br> <br>
-    <input [(ngModel)]="Extension"class="Posicion" type="numeric" name="Extension" placeholder="Extension">
-    <button id="Crear">Crear</button>
 
+<div class="recuadro_plantilla">
+    <h1 class="titulo_recuadro">{{dataService.zonaActual ? 'Editar' : 'Crear'}} Zona</h1>
+    <br> <br> <br> <br><br>
+    <div class="container">
+        <div class="row">
+            <h1 class="col-sm">Nombre Zona</h1>
+            <input [(ngModel)]="NombreZona" class="col-sm" type="text" name="Nombre de Zona" placeholder="Nombre de Zona">
+        </div>
+    </div>
+    <br> <br> <br> <br>
+    <div class="container">
+        <div class="row">
+            <h1 class="col-sm">Especies</h1>
+            <input [(ngModel)]="Especies" class="col-sm" type="text" name="Especies" placeholder="Especies">
+
+        </div>
+    </div>
+    <br> <br> <br> <br>
+    <div class="container">
+        <div class="row">
+            <h1 class="col-sm">Extension</h1>
+            <input [(ngModel)]="Extension"class="col-sm" type="text" name="Extension" placeholder="Extension">
+        </div>
+    </div>
+    <br> <br>
+
+    <button id="Crear" (click)="guardar()">{{dataService.zonaActual ? 'Editar' : 'Guardar'}}</button>
 </div>
