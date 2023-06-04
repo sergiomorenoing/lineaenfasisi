@@ -27,7 +27,11 @@
 #select_zona{
     position: absolute;
     top:45%;
-    left:12%;
+    left:5%;
+    background-color: #F5DBB5;
+    font-family: 'Courier New', Courier, monospace;
+    width: 25%;
+    height: 9%;
 }
 
 .contenido_especifico_recuadro{
@@ -44,8 +48,19 @@
 #eliminar{
     position: absolute;
     bottom: 2%;
-    left: 45%;
+    left: 60%;
     background-color: #DC0004;
+    color:white;
+    height: 35px;
+    width: 100px;
+    border:none;
+}
+
+#actualizar{
+    position: absolute;
+    bottom: 2%;
+    left: 30%;
+    background-color:#E49A2B;
     color:white;
     height: 35px;
     width: 100px;
