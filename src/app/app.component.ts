@@ -63,6 +63,8 @@ export class AppComponent implements OnInit {
     // debemos replicar esta funcion por cada base, la primera es la de zonas, para esto se le debe de mandar el nombre que se puso al array en el service, y el nombre del campo llave
 
     this.leerLocalStorage("zonas","id");
+    this.leerLocalStorage("habitats","id");
+    this.leerLocalStorage("tipoVegetacion","id");
 
     // Fin cargue tabla zonas
     

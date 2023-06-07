@@ -31,6 +31,18 @@ export class DataService {
     }
 ];
 
+habitats = [
+  { id: "1", nombre: "Aéreo", clima: "Tropical Húmedo", idTipoVegetacion: "1", tipoVegetacion: "Bosque Templado" },
+  { id: "2", nombre: "Terrestre", clima: "Mediterráneo", idTipoVegetacion: "2", tipoVegetacion: "Selva Húmeda" },
+  { id: "3", nombre: "Acuático", clima: "Oceánico", idTipoVegetacion: "3", tipoVegetacion: "Manglar" },
+];
+
+tipoVegetacion = [
+  { id: 1, value:"Bosque Templado" },
+  { id: 2, value:"Selva Húmeda" },
+  { id: 3, value:"Manglar" }
+];
+
 zonaActual:any;
 zonaActualPos:any;
 
