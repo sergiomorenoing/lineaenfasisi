@@ -1,76 +1,34 @@
-
-<form>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputCodigo">Codigo Itinerario</label>
-        <input type="text" class="form-control" id="inputCodigo" placeholder="Codigo">
-      </div>
-  
-      <div class="form-group col-md-4">
-        <label for="inputState">Estado</label>
-        <select id="inputState" class="form-control">
-          <option selected>Activo</option>
-          <option>Inactivo</option>
-        </select>
-      </div>
-  
-      <div class="form-group col-md-4">
-        <label for="fecha_inicio">Fecha inicio</label>
-        <input type="date" class="form-control" id="fecha_inicio" required>
-      </div>
-  
-      <div class="form-group col-md-4">
-        <label for="hora_inicio">Hora inicio</label>
-        <input type="time" class="form-control" id="hora_inicio" required>
-      </div>
-  
-      <div class="form-group col-md-4">
-        <label for="fecha_final">Fecha final</label>
-        <input type="date" class="form-control" id="fecha_final" required>
-      </div>
-  
-      <div class="form-group col-md-4">
-        <label for="hora_final">Hora final</label>
-        <input type="time" class="form-control" id="hora_final" required>
-      </div>
-    </div>
-  
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputLongitud">Longitud</label>
-        <input type="text" class="form-control" id="inputLongitud" placeholder="Km">
-      </div>
-  
-      <div class="form-group col-md-6">
-        <label for="inputVisitantes">Visitantes</label>
-        <input type="text" class="form-control" id="inputVisitantes" placeholder="Q Visitantes">
-      </div>
-    </div>
-  
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputGuia">Guia</label>
-        <input type="text" class="form-control" id="inputGuia" placeholder="Guia Encargado">
-      </div>
-    </div>
-  
-    <button type="button" class="btn btn-primary" (click)="agregar()">Agregar</button>
-  </form>
-  
+<button type="button" class="btn btn-success" (click)="agregar()">Agregar</button>
+<br>
   <table id="tablaValores" class="table">
     <thead>
       <tr>
-        <th>Codigo</th>
-        <th>Estado</th>
-        <th>Fecha inicio</th>
-        <th>Hora inicio</th>
-        <th>Fecha final</th>
-        <th>Hora final</th>
-        <th>Longitud</th>
-        <th>Visitantes</th>
-        <th>Guia</th>
+        <th scope="col">Codigo</th>
+        <!--<th scope="col">Estado</th>-->
+        <th scope="col">Fecha inicio</th>
+        <th scope="col">Hora inicio</th>
+        <th scope="col">Fecha final</th>
+        <th scope="col">Hora final</th>
+        <th scope="col">Longitud</th>
+        <th scope="col">Visitantes</th>
+        <th scope="col">Guia</th>
+        <th scope="col"></th>
       </tr>
     </thead>
-    <tbody></tbody>
+    <tbody><tr *ngFor ="let itinerario of dataService.itinerario; index as i">
+      <th scope="row">itinerario.codigo</th>
+      <!--<td>{{dato.Estado}}</td>-->
+      <td>itinerario.fecha inicio</td>
+      <td>itinerario.Hora inicio</td>
+      <td>itinerario.Fecha final</td>
+      <td>itinerario.Hora final</td>
+      <td>itinerario.Longitud</td>
+      <td>itinerario.Visitantes</td>
+      <td>itinerario.guia</td>
+      <td>
+          <button type="submit" class="btn btn-warning ml-2" (click)="editar(i,itinerario)">Editar</button>
+          <button type="submit" class="btn btn-danger ml-2" (click)="eliminar(i)">Eliminar</button>
+      </td>
+  </tr></tbody>
   </table>
   
