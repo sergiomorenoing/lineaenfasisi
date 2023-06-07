@@ -6,9 +6,7 @@
 
     <select id="select_zona" (change)="cambiarZona($event.target.value)"> 
         <option value="-" selected>Seleccione la zona</option>
-        <option value="Zona 1">Zona 1</option>
-        <option value="Zona 2">Zona 2</option>
-        <option value="Zona 3">Zona 3</option>
+        <option *ngFor="let zona of dataService.zonas; index as i" value="{{i}}">Zona {{i+1}} {{zona.nombre}}</option>
     </select>
 
     <div class="contenido_recuadro">
@@ -22,7 +20,9 @@
             <h1 class="atributos">{{extension}}</h1>
         </div>
 
-        <button id="eliminar">Eliminar</button>
+        <button id="actualizar" (click)="actualizar()" *ngIf="index_actual != '-' && index_actual != null;">Actualizar</button>
+
+        <button id="eliminar" (click)="eliminar()" *ngIf="index_actual != '-' && index_actual != null;">Eliminar</button>
 
     </div>
 
