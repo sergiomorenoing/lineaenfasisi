@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../../service/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ngx-add',
@@ -9,21 +11,34 @@ export class AddComponent implements OnInit {
 
   nombre: string;
   clima: string;
-  tipoVegetacion: string;
-  listTipoVegetacion: [
-    {id: 1, value:"Bosque Templado"},
-    {id: 2, value:"Selva Húmeda"},
-    {id: 3, value:"Manglar"}
-  ];
+  tipoVegetacion: any;
+  listTipoVegetacion: any;
+  habitatAdd: any;
 
-  constructor() { }
+  constructor(public dataService: DataService, private router: Router) { }
 
   ngOnInit(): void {
     this.tipoVegetacion = "";
+    this.listTipoVegetacion = this.dataService.tipoVegetacion;
   }
 
   add(){
-    alert(this.nombre + this.clima + this.tipoVegetacion);
+    this.habitatAdd = {
+      id: Math.floor(Math.random() * 100),
+      clima: this.clima,
+      idTipoVegetacion: this.tipoVegetacion,
+      nombre: this.nombre,
+      tipoVegetacion: this.dataService.tipoVegetacion.find(x => x.id == this.tipoVegetacion).value
+    }
+
+    this.dataService.habitats.push(this.habitatAdd);
+    this.dataService.generarActualizacionLocalStorage("habitats", this.dataService.habitats);
+
+    this.router.navigate(['/pages/habitat/list']);
+  }
+
+  goBack() {
+    this.router.navigate(['/pages/habitat/list']);
   }
 
 }
