@@ -33,32 +33,45 @@ export class ListComponent implements OnInit {
     if (value != "-" ) {
 
       this.zona_actual = this.dataService.zonas[value].nombre + " -  ID " + this.dataService.zonas[value].id;
-    
+
       this.especies = this.dataService.zonas[value].especies;
-  
+
       this.extension = this.dataService.zonas[value].extension;
 
       this.zona_actual_objeto = this.dataService.zonas[value];
     }
-    
+
     else {
 
       this.zona_actual = "";
-    
+
       this.especies = "";
-  
+
       this.extension = "";
 
       this.zona_actual_objeto = null;
 
     }
-  
+
   }
 
   actualizar(){
-    this.dataService.zonaActual = this.zona_actual_objeto;
+    Swal.fire({
+      title: 'Desea actualizar la zona?',
+      icon: 'info',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Actualizar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      this.dataService.zonaActual = this.zona_actual_objeto;
     this.dataService.zonaActualPos = this.index_actual;
     this.router.navigate(['pages/zonas/create']);
+
+    });
+
+
 
   }
 
@@ -80,9 +93,9 @@ export class ListComponent implements OnInit {
         this.index_actual = null;
 
         this.zona_actual = "";
-    
+
         this.especies = "";
-    
+
         this.extension = "";
 
         this.zona_actual_objeto = null;

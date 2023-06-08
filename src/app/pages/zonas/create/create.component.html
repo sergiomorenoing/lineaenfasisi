@@ -1,30 +1,35 @@
-<h1>¡Bienvenido Empleado X!</h1>
-
-<div class="recuadro_plantilla">
-    <h1 class="titulo_recuadro">{{dataService.zonaActual ? 'Editar' : 'Crear'}} Zona</h1>
-    <br> <br> <br> <br><br>
-    <div class="container">
-        <div class="row">
-            <h1 class="col-sm">Nombre Zona</h1>
-            <input [(ngModel)]="NombreZona" class="col-sm" type="text" name="Nombre de Zona" placeholder="Nombre de Zona">
-        </div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm 4">
+      <h1>¡Bienvenido Empleado X!</h1>
+        <img id="imagenZonaCrear" src="https://media.jetcamp.com/228993.png" alt="imagenzona">
     </div>
-    <br> <br> <br> <br>
-    <div class="container">
-        <div class="row">
-            <h1 class="col-sm">Especies</h1>
-            <input [(ngModel)]="Especies" class="col-sm" type="text" name="Especies" placeholder="Especies">
+
+    <div class="col-sm 8">
+
+        <div class="container" id="contenedor">
+          <div class="row">
+            Nombre Zona
+            <br>
+            <input [(ngModel)]="NombreZona" type="text" class="form-control" name="Crear Zona" placeholder="Nombre de Zona">
+            Especies
+            <br>
+            <input [(ngModel)]="Especies"  type="text" class="form-control" name="Especies" placeholder="Especies">
+            Extension
+            <input [(ngModel)]="Extension"type="text" class="form-control" name="Extension" placeholder="Extension">
 
         </div>
-    </div>
-    <br> <br> <br> <br>
-    <div class="container">
         <div class="row">
-            <h1 class="col-sm">Extension</h1>
-            <input [(ngModel)]="Extension"class="col-sm" type="text" name="Extension" placeholder="Extension">
+          <button id="Crear" class="btn btn-warning" (click)="guardar()">{{dataService.zonaActual ? 'Editar' : 'Guardar'}}</button>
         </div>
-    </div>
-    <br> <br>
 
-    <button id="Crear" (click)="guardar()">{{dataService.zonaActual ? 'Editar' : 'Guardar'}}</button>
+        </div>
+
+
+
+    </div>
+    </div>
 </div>
+
+
+
