@@ -1,46 +1,48 @@
 .container{
-    height: 15px;
     text-align: center;
+
 }
 
 .container h1 {
-    font-size: 20px;
+    font-size: 15px;
 }
 
-.container input {
-    right: 3%;
-}
+// .container input {
+//     right: 2%;
+//     width: 2%;
+//   }
 
 
-.recuadro_plantilla{
-    width: 500px;
-    height: 450px;
+#contenedor{
+
     background-color: #E49A2B;
-    position: relative;
-    left: 25%;
+    margin: 5%;
+    font-size: 18px;
 }
 
 .titulo_recuadro{
-    padding-left: 3%;
+    padding-left: 2%;
+
     font-size: 25px;
     color: white ;
-    position: absolute;
-    width: 70%;
+
+    right: 20%;
     float: left;
 }
 
-.Posicion{
-    position: absolute;
-    left:32%;
-}
+
 
 #Crear{
-    position: absolute;
+
     bottom: 3%;
-    left: 42%;
+    // left: 42%;
     background-color: #671313;
     color:white;
-    height: 35px;
-    width: 100px;
+
     border:none;
+}
+
+#imagenZonaCrear{
+  max-width: 80%;
+  align-items: left;
 }
