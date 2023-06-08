@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { DataService } from '../../../service/data.service';
 
 @Component({
   selector: 'ngx-listar',
@@ -15,7 +16,7 @@ export class ListarComponent implements OnInit {
   ngOnInit(): void {
   }
   agregar(){
-    this.dataService.itinerrioCurrent=null;
+    this.dataService.itinerarioCurrent=null;
     this.dataService.itinerarioCurrentPos=null;
     this.router.navigate(['/pages/itinerario/agregar']);
   }
@@ -38,7 +39,7 @@ export class ListarComponent implements OnInit {
       if (result.isConfirmed) {
         this.dataService.itinerarioCurrent=null;
         this.dataService.itinerarioCurrentPos=null;
-        this.dataService.itineario.splice(index,1)
+        this.dataService.intinerarios.splice(index,1)
         Swal.fire(
           'Eliminado!',
           'El itinerario ha sido eliminado de la base de datos',
