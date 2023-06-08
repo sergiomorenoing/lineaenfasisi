@@ -1,0 +1,43 @@
+table {
+  background-color: #DCF3EE;
+  border-color: #2E8B57;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
+  background-color: #2E8B57;
+  color: white;
+}
+
+td {
+  background-color: #E6F1F0;
+}
+
+.btn-success {
+  background-color: #2E8B57;
+  border-color: #2E8B57;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #257B4E;
+  border-color: #257B4E;
+}
+
+.btn-danger {
+  background-color: #671313;
+  border-color: #671313;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #5C0F0F;
+  border-color: #5C0F0F;
+}
+.custom-background {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/664/664637.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+}

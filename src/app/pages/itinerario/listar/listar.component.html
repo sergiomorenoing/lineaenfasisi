@@ -1,34 +1,50 @@
-<button type="button" class="btn btn-success" (click)="agregar()">Agregar</button>
-<br>
-  <table id="tablaValores" class="table">
-    <thead>
-      <tr>
-        <th scope="col">Codigo</th>
-        <!--<th scope="col">Estado</th>-->
-        <th scope="col">Fecha inicio</th>
-        <th scope="col">Hora inicio</th>
-        <th scope="col">Fecha final</th>
-        <th scope="col">Hora final</th>
-        <th scope="col">Longitud</th>
-        <th scope="col">Visitantes</th>
-        <th scope="col">Guia</th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-    <tbody><tr *ngFor ="let itinerario of dataService.itinerario; index as i">
-      <th scope="row">itinerario.codigo</th>
-      <!--<td>{{dato.Estado}}</td>-->
-      <td>itinerario.fecha inicio</td>
-      <td>itinerario.Hora inicio</td>
-      <td>itinerario.Fecha final</td>
-      <td>itinerario.Hora final</td>
-      <td>itinerario.Longitud</td>
-      <td>itinerario.Visitantes</td>
-      <td>itinerario.guia</td>
-      <td>
-          <button type="submit" class="btn btn-warning ml-2" (click)="editar(i,itinerario)">Editar</button>
-          <button type="submit" class="btn btn-danger ml-2" (click)="eliminar(i)">Eliminar</button>
-      </td>
-  </tr></tbody>
-  </table>
-  
+<div class="container custom-background">
+<button type="button" class="btn btn-success" (click)="add()">Agregar</button>
+<div class="row justify-content-center">
+  <div class="col-sm-3">
+    <div class="card bg-transparent  border-0">
+      <div class="card-body">
+        <h5 class="card-title">Itinerarios</h5>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+  <div class="col-sm-9">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Codigo</th>
+          <th scope="col">Fecha inicio</th>
+          <th scope="col">Hora inicio</th>
+          <th scope="col">Fecha final</th>
+          <th scope="col">Hora final</th>
+          <th scope="col">Longitud</th>
+          <th scope="col">Visitantes</th>
+          <th scope="col">Guia</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of listitinerarios">
+          <th scope="row">{{ item.codigo }}</th>
+          <td>{{ item.fecha_inicio }}</td>
+          <td>{{ item.hora_inicio }}</td>
+          <td>{{ item.fecha_final }}</td>
+          <td>{{ item.hora_final }}</td>
+          <td>{{ item.longitud }}</td>
+          <td>{{ item.visitantes }}</td>
+          <td>{{ item.guia }}</td>
+          <td>
+            <a class="btn btn-block btn-xs" (click)="edit(item)" style="background-color: #F5DBB5;"><i class="fa fa-edit"></i></a>
+          </td>
+          <td>
+            <a class="btn btn-block btn-info btn-xs" (click)="delete(item)"><i class="fa fa-trash"></i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+</div>

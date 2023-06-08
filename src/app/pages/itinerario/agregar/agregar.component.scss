@@ -1,46 +1,49 @@
-.container{
-    height: 15px;
-    text-align: center;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left:20%;
+  height: 100vh;
 }
 
-.container h1 {
-    font-size: 20px;
+.recuadro_plantilla {
+  background-color: #E6F1F0;
+  padding: 20px;
+  border: 1px solid #A7D6D3;
+  border-radius: 5px;
+
 }
 
-.container input {
-    right: 3%;
+h1 {
+  color: #2E8B57;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-
-.recuadro_plantilla{
-    width: 400px;
-    height: 700px;
-    background-color: #E49A2B;
-    position: relative;
-    left: 5%;
+input[type="text"] {
+  background-color: #DCF3EE;
+  border: 1px solid #A7D6D3;
+  padding: 5px;
+  border-radius: 3px;
+  width: 200px;
+  margin-bottom: 10px;
 }
 
-.titulo_recuadro{
-    padding-left: 3%;
-    font-size: 25px;
-    color: white ;
-    position: absolute;
-    width: 70%;
-    float: left;
+button {
+  background-color: #2E8B57;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.Posicion{
-    position: absolute;
-    left:32%;
+button:hover {
+  background-color: #257B4E;
 }
-
-#crear{
-    position: absolute;
-    bottom: 2%;
-    left: 5%;
-    background-color: #671313;
-    color:white;
-    height: 35px;
-    width: 100px;
-    border:none;
+.custom-background {
+  background-image: url('https://img.freepik.com/vector-gratis/conjunto-logotipo-zoologico_1284-5234.jpg?w=2000');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
 }
