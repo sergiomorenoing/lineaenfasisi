@@ -1,0 +1,46 @@
+.container{
+    height: 15px;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 20px;
+}
+
+.container input {
+    right: 3%;
+}
+
+
+.recuadro_plantilla{
+    width: 400px;
+    height: 700px;
+    background-color: #E49A2B;
+    position: relative;
+    left: 5%;
+}
+
+.titulo_recuadro{
+    padding-left: 3%;
+    font-size: 25px;
+    color: white ;
+    position: absolute;
+    width: 70%;
+    float: left;
+}
+
+.Posicion{
+    position: absolute;
+    left:32%;
+}
+
+#crear{
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+    background-color: #671313;
+    color:white;
+    height: 35px;
+    width: 100px;
+    border:none;
+}

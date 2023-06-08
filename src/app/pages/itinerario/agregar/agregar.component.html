@@ -1,59 +1,62 @@
-
-<form>
-    <div class="form-row">
+<h1>¡Bienvenido Empleado X!</h1>
+<br>
+<!--<form>-->
+    <div class="recuadro_plantilla">
       <div class="form-group col-md-6">
-        <label for="inputEmail4">Codigp Itinerario</label>
-        <input type="Codigo" class="form-control" id="inputCodigo" placeholder="codigo">
+        <label for="inputcodigo">Codigo</label>
+        <input [(ngModel)]= itinerario.codigo type="text" class="form-control" id="inputcodigo" placeholder="codigo">
       </div>
 
-      <div class="form-group col-md-4">
+      
+    <!--<div class="form-group col-md-4">
         <label for="inputState">Estado</label>
         <select id="inputState" class="form-control">
           <option selected>Activo</option>
           <option>Inactivo</option>
         </select>
-      </div>
+      </div> -->
 
-      <div class="form-group col-md-4">
-      <label for="fecha_inicio">Fecha inicio</label>
-      <input type="date" class="form-control" id="fecha_inicio" required>
-    </div>
-
-    <div class="form-group col-md-4">
-      <label for="hora_inicio">Hora inicio</label>
-      <input type="time" class="form-control" id="hora_inicio" required>
-    </div>
-
-    <div class="form-group col-md-4">
-      <label for="fecha_final">Fecha final</label>
-      <input type="date" class="form-control" id="fecha_final" required>
-    </div>
-
-    <div class="form-group col-md-4">
-      <label for="hora_final">Hora final</label>
-      <input type="time" class="form-control" id="hora_final" required>
-    </div>
-      
-    </div>
-
-    <div class="form-row"></div>
-    <div class="form-group">
-      <label for="inputLongitud">Logitud</label>
-      <input type="text" class="form-control" id="inputLongitud" placeholder="Km">
-    </div>
-
-    <div class="form-group">
-      <label for="inputVisitantes">Visitantes</label>
-      <input type="text" class="form-control" id="inputVisitantes" placeholder="Q Visitantes">
-    </div>
-
-    <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="inputGuia">Guia</label>
-        <input type="text" class="form-control" id="inputGuia"placeholder="Guia Encargado">
-      </div>
-      
+      <label for="inputfecha_inicio">Fecha inicio</label>
+      <input [(ngModel)]= itinerario.fecha_inicio type="date" class="form-control" id="inputfecha_inicio" placeholder="Fecha inicio" required>
     </div>
-    <button type="button" class="btn btn-primary" (click)="imprimir()">Primary</button>
-  </form>
+
+    <div class="form-group col-md-6">
+      <label for="inputhora_inicio">Hora inicio</label>
+      <input [(ngModel)]= itinerario.hora_inicio type="time" class="form-control" id="inputhora_inicio" placeholder="Hora inicio" required>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="inputfecha_final">Fecha final</label>
+      <input [(ngModel)]= "itinerario.fecha_final" type="date" class="form-control" id="inputfecha_final" placeholder="Fecha_final" required>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="inputhora_final">Hora final</label>
+      <input [(ngModel)]= "itinerario.fecha_final" type="time" class="form-control" id="hora_final" placeholder="inputhora_final" required>
+    </div>
+      
+    
+
+    <div class="form-group col-md-6">
+      <label for="inputlongitud">Logitud</label>
+      <input [(ngModel)]= "itinerario.longitud" type="text" class="form-control" id="longitud" placeholder="inputlongitud">
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="inputvisitante">Visitante</label>
+      <input [(ngModel)]= "itinerario.visitante" type="text" class="form-control" id="visitante" placeholder="inputvisitante">
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="inputguia">Guia</label>
+        <input [(ngModel)]= "itinerario.guia" type="text" class="form-control" id="guia" placeholder="inputguia">
+    </div>
+
+    <br><br><br>
+
+    <button id="crear" (click)="imprimir()">{{dataService.usuarioCurrent ? 'Editar' : 'Guardar'}}</button>
+  </div>
+  <!--</form>-->
+
   
