@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
-  
+
   // Funcion para actualizar cualquier cambio en el local storage, se le debe pasar el nombre del array y el propio array
   generarActualizacionLocalStorage(nombre_tabla:string,baseServie:any){
     localStorage.setItem(nombre_tabla,JSON.stringify(baseServie));
@@ -33,30 +33,42 @@ export class DataService {
 
 intinerarios = [
   {
-    id: "0",
-    nombre: "Helada",
-    especies: "Pinguino, Totuga, Tiburon",
-    extension: "14,5km",
+    codigo:'0',
+    fecha_inicio: '26/06/2023',
+    hora_inicio:'14:00',
+    fecha_final:'26/06/2023',
+    hora_final:'15:00',
+    longitud:'3',
+    visitantes:'20',
+    guia:'Mario',
   },
   {
-    id: "1",
-    nombre: "Sabana",
-    especies: "Rinoceronte, Tigre, Cebra",
-    extension: "44,0km",
+    codigo:'1',
+    fecha_inicio: '27/06/2023',
+    hora_inicio:'15:00',
+    fecha_final:'27/06/2023',
+    hora_final:'16:00',
+    longitud:'4',
+    visitantes:'45',
+    guia:'Luisa',
   },
   {
-    id: "2",
-    nombre: "Aerea",
-    especies: "Aguila, Condor",
-    extension: "60,9km",
+    codigo:'2',
+    fecha_inicio: '30/06/2023',
+    hora_inicio:'18:00',
+    fecha_final:'6/07/2023',
+    hora_final:'19:00',
+    longitud:'20',
+    visitantes:'15',
+    guia:'Eugenia',
   }
 ];
 
 zonaActual:any;
 zonaActualPos:any;
 
-itinerarioCurrent:any;
-itinerarioCurrentPos:any;
+itinerarioActual:any;
+itinerarioActualPos:any;
 
   constructor() { }
 }

@@ -1,62 +1,49 @@
-<h1>¡Bienvenido Empleado X!</h1>
-<br>
-<!--<form>-->
+<div class="container custom-background">
+  <div class="container">
     <div class="recuadro_plantilla">
-      <div class="form-group col-md-6">
-        <label for="inputcodigo">Codigo</label>
-        <input [(ngModel)]= itinerario.codigo type="text" class="form-control" id="inputcodigo" placeholder="codigo">
+      <h1>¡AGREGAR ITINERARIO!</h1>
+
+      <h1 class="titulo_recuadro">{{dataService.itinerarioActual ? 'Editar' : 'Crear'}} Itinerario</h1>
+
+      <div>
+        <label for="codigo" style="color: #2E8B57;">Codigo:</label>
+        <input [(ngModel)]="codigo" type="text" name="codigo" id="codigo" placeholder="Codigo">
       </div>
 
-      
-    <!--<div class="form-group col-md-4">
-        <label for="inputState">Estado</label>
-        <select id="inputState" class="form-control">
-          <option selected>Activo</option>
-          <option>Inactivo</option>
-        </select>
-      </div> -->
+      <div>
+        <label for="fecha_inicio" style="color: #2E8B57;">Fecha inicio:</label>
+        <input [(ngModel)]="fecha_inicio" type="text" name="fecha_inicio" id="fecha_inicio" placeholder="Fecha inicio">
+      </div>
 
-      <div class="form-group col-md-6">
-      <label for="inputfecha_inicio">Fecha inicio</label>
-      <input [(ngModel)]= itinerario.fecha_inicio type="date" class="form-control" id="inputfecha_inicio" placeholder="Fecha inicio" required>
+      <div>
+        <label for="hora_inicio" style="color: #2E8B57;">Hora inicio:</label>
+        <input [(ngModel)]="hora_inicio" type="text" name="hora_inicio" id="hora_inicio" placeholder="Hora inicio">
+      </div>
+
+      <div>
+        <label for="fecha_final" style="color: #2E8B57;">Fecha final:</label>
+        <input [(ngModel)]="fecha_final" type="text" name="fecha_final" id="fecha_final" placeholder="Fecha final">
+      </div>
+
+      <div>
+        <label for="longitud" style="color: #2E8B57;">Longitud:</label>
+        <input [(ngModel)]="longitud" type="text" name="longitud" id="longitud" placeholder="Longitud">
+      </div>
+
+      <div>
+        <label for="visitantes" style="color: #2E8B57;">Visitantes:</label>
+        <input [(ngModel)]="visitantes" type="text" name="visitantes" id="visitantes" placeholder="Visitantes">
+      </div>
+
+      <div>
+        <label for="guia" style="color: #2E8B57;">Guia:</label>
+        <input [(ngModel)]="guia" type="text" name="guia" id="guia" placeholder="Guia">
+      </div>
+
+      <br>
+
+      <button id="Crear" (click)="guardar()">{{dataService.itinerarioActual ? 'Editar' : 'Guardar'}}</button>
     </div>
-
-    <div class="form-group col-md-6">
-      <label for="inputhora_inicio">Hora inicio</label>
-      <input [(ngModel)]= itinerario.hora_inicio type="time" class="form-control" id="inputhora_inicio" placeholder="Hora inicio" required>
-    </div>
-
-    <div class="form-group col-md-6">
-      <label for="inputfecha_final">Fecha final</label>
-      <input [(ngModel)]= "itinerario.fecha_final" type="date" class="form-control" id="inputfecha_final" placeholder="Fecha_final" required>
-    </div>
-
-    <div class="form-group col-md-6">
-      <label for="inputhora_final">Hora final</label>
-      <input [(ngModel)]= "itinerario.fecha_final" type="time" class="form-control" id="hora_final" placeholder="inputhora_final" required>
-    </div>
-      
-    
-
-    <div class="form-group col-md-6">
-      <label for="inputlongitud">Logitud</label>
-      <input [(ngModel)]= "itinerario.longitud" type="text" class="form-control" id="longitud" placeholder="inputlongitud">
-    </div>
-
-    <div class="form-group col-md-6">
-      <label for="inputvisitante">Visitante</label>
-      <input [(ngModel)]= "itinerario.visitante" type="text" class="form-control" id="visitante" placeholder="inputvisitante">
-    </div>
-
-    <div class="form-group col-md-6">
-        <label for="inputguia">Guia</label>
-        <input [(ngModel)]= "itinerario.guia" type="text" class="form-control" id="guia" placeholder="inputguia">
-    </div>
-
-    <br><br><br>
-
-    <button id="crear" (click)="imprimir()">{{dataService.usuarioCurrent ? 'Editar' : 'Guardar'}}</button>
   </div>
-  <!--</form>-->
 
-  
+</div>

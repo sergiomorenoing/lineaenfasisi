@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { DataService } from '../../../service/data.service';
+import { NbWindowService } from '@nebular/theme';
+
 
 @Component({
   selector: 'ngx-listar',
@@ -9,48 +11,62 @@ import { DataService } from '../../../service/data.service';
   styleUrls: ['./listar.component.scss']
 })
 export class ListarComponent implements OnInit {
-  
+  codigo:string
+  fecha_inicio: string
+  hora_inicio:string
+  fecha_final:string
+  hora_final:string
+  longitud:string
+  visitantes:string
+  guia:string
+  itinerario_edit:any;
 
-  constructor(private router:Router, public dataService:DataService) { }
+  listitinerarios = [];
+
+  constructor(private windowService: NbWindowService, public dataService: DataService, private router: Router) { }
 
   ngOnInit(): void {
+    this.listitinerarios = this.dataService.intinerarios;
   }
-  agregar(){
-    this.dataService.itinerarioCurrent=null;
-    this.dataService.itinerarioCurrentPos=null;
-    this.router.navigate(['/pages/itinerario/agregar']);
-  }
-  editar(index:any,itineario:any){
-    this.dataService.itinerarioCurrentPos=index;
-    this.dataService.itinerarioCurrent=itineario;
-    this.router.navigate(['/pages/itinerario/agregar']);
-  }
-  eliminar(index : any){
 
+  delete(item) {
     Swal.fire({
-      title: 'Estas seguro de eliminar el itineario?',
-      text: "Esta operación no se puede revetir!",
+      title: 'Eliminar itinerario?',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Si, Eliminar!'
+      confirmButtonText: 'Si',
+      cancelButtonText: 'Cancelar'
     }).then((result) => {
       if (result.isConfirmed) {
-        this.dataService.itinerarioCurrent=null;
-        this.dataService.itinerarioCurrentPos=null;
-        this.dataService.intinerarios.splice(index,1)
+        this.dataService.intinerarios.splice(this.dataService.intinerarios.findIndex(x => x.codigo == item.id), 1);
+        this.dataService.generarActualizacionLocalStorage("itinerarios",this.dataService.intinerarios);
         Swal.fire(
           'Eliminado!',
-          'El itinerario ha sido eliminado de la base de datos',
+          '',
           'success'
         )
       }
-    })
+    });
+  }
 
-    
-    // this.router.navigate(['/pages/user/add']);
+  edit(item: any) {
+    const queryParams = {
+      codigo: item.codigo,
+      fecha_inicio: item.fecha_inicio,
+      hora_inicio: item.hora_inicio,
+      fecha_final: item.fecha_final,
+      hora_final: item.hora_final,
+      longitud: item.longitud,
+      visitantes: item.visitantes,
+      guia: item.guia
+    };
+
+    this.router.navigate(['/pages/itinerario/agregar'], { queryParams });
+  }
+
+  add() {
+    this.router.navigate(['/pages/itinerario/agregar'])
   }
 }
-
-
